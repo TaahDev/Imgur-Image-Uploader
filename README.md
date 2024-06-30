@@ -2,6 +2,10 @@
 
 A lightweight web application that allows users to easily upload images to Imgur using Python (Flask) and HTML.
 
+<img src="https://imgur.com/78jE0Cj.png" alt="YouTube Downloader" width="500" style="border-radius: 15px;">
+
+<img src="https://imgur.com/2fSPXEw.png" alt="YouTube Downloader" width="500" style="border-radius: 15px;">
+
 ## ✨ Features
 
 - Simple and intuitive user interface
