@@ -24,8 +24,8 @@ Before you begin, ensure you have met the following requirements:
 
 1. Clone the repository:
    ```
-   git clone https://github.com/taahdev/imgur-image-uploader.git
-   cd imgur-image-uploader
+   git clone https://github.com/TaahDev/Imgur-Image-Uploader.git
+   cd Imgur-Image-Uploader
    ```
 
 2. Install the required packages:
