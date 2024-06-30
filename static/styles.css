@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #212529;
+  color: #fff;
+  line-height: 1.6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  max-width: 600px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #343a40;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.upload-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.emoji {
+  font-size: 1.8rem;
+  margin-right: 10px;
+}
+
+.input-file {
+  display: none;
+}
+
+.file-label {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.file-label:hover {
+  background-color: #0056b3;
+}
+
+.btn-upload {
+  background-color: #28a745;
+  font-weight: 600;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 40px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-upload:hover {
+  background-color: #218838;
+}
+
+.upload-success {
+  max-width: 600px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #343a40;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  margin: 20px auto;
+}
+
+.upload-success h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.upload-success .uploaded-link {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.upload-success .uploaded-link:hover {
+  text-decoration: none;
+}
+
+.btn-return {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: none;
+  margin-top: 20px;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: 600;
+}
+
+.btn-return:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 600px) {
+  .container {
+      padding: 10px;
+  }
+  .upload-success {
+      padding: 15px;
+  }
+}
+
+.copy-alert {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  z-index: 999;
+  text-align: center;
+}

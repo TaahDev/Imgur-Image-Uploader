@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload Success</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="upload-success">
+        <h2>✅ Upload Successful!</h2>
+        <p>⬇️ Click to copy, CTRL + Click to open ⬇️</p>
+        {% set imgur_link_clean = imgur_link.replace('i.imgur.com', 'imgur.com') %}
+        <a href="{{ imgur_link_clean }}" onclick="copyURI(event)" target="_blank" class="uploaded-link">{{ imgur_link_clean }}</a>
+        <br><br>
+        <a href="/" class="btn-return">Return</a>
+    </div>
+
+    <script>
+        function copyURI(evt) {
+            if (evt.ctrlKey || evt.metaKey) {
+                // Allow default behavior (open link in new tab)
+                return;
+            }
+
+            evt.preventDefault();
+            var linkToCopy = evt.target.getAttribute('href');
+
+            navigator.clipboard.writeText(linkToCopy)
+                .then(function() {
+                    // Show popup or alert for "Copied to Clipboard!"
+                    var alertBox = document.createElement('div');
+                    alertBox.textContent = "Copied to Clipboard!";
+                    alertBox.classList.add('copy-alert');
+                    document.body.appendChild(alertBox);
+
+                    // Remove alert after 2 seconds
+                    setTimeout(function() {
+                        alertBox.remove();
+                    }, 2000);
+                })
+                .catch(function(err) {
+                    console.error('Failed to copy: ', err);
+                });
+        }
+    </script>
+</body>
+</html>

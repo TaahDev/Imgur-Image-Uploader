@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Image to Imgur</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <form method="POST" action="/upload" enctype="multipart/form-data" class="upload-form">
+            <h1>📸 Upload Image</h1>
+            <input type="file" name="file" id="file" class="input-file" onchange="updateFileName(this)">
+            <label for="file" class="file-label" id="file-label">Choose a file...</label>
+            <button type="submit" class="btn-upload">Upload</button>
+        </form>
+    </div>
+
+    <script>
+        function updateFileName(input) {
+            var fileName = input.files[0].name;
+            document.getElementById('file-label').innerText = fileName;
+        }
+    </script>
+</body>
+</html>
